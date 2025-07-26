@@ -1,3 +1,3 @@
 ## Solidity world
 
-Foundry consists of:
+Solidity snippets
