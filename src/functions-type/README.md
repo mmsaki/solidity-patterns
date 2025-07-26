@@ -23,14 +23,14 @@ contract C {
 ## Function in storage variable
 
 - Can be declared as a storage variable
-- Function type in storage must be external
-  - Solidity 0.8.13 function can be declared in internal storage variable
-  - [Securuty Issue #15716 Optimizer removes assembly block that initializes function](https://github.com/ethereum/solidity/issues/15716)
+- Function type in storage must be internal or external
+  - [Security Issue #15716 Optimizer removes assembly block that initializes function](https://github.com/ethereum/solidity/issues/15716)
 
 ```solidity
 contract C {
     /// storage varible of function type
     function(address) external returns (address) foo;
+    function(address) internal returns (address) bar;
 }
 ```
 
