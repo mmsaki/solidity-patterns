@@ -24,6 +24,7 @@ contract C {
 
 - Can be declared as a storage variable
 - Function type in storage must be external
+  - Solidity 0.8.13 function can be declared in internal storage variable
   - [Securuty Issue #15716 Optimizer removes assembly block that initializes function](https://github.com/ethereum/solidity/issues/15716)
 
 ```solidity
@@ -54,13 +55,13 @@ abstract contract C {
 - Can declare function in interface
 
 ```solidity
-interfac IC {
+interface IC {
     /// interface 
     function foo(address) external returns (address);
 }
 ```
 
-## Function as a return type
+## Function in a return type
 
 - Can declare a function as return type
 - Can dynamically change function in return type
@@ -91,7 +92,7 @@ contract C {
 }
 ```
 
-## Function as a mutable object
+## Function as mutable object
 
 - Can change function selector of returned function
 - Can change function address (the contract with call context)
@@ -110,7 +111,7 @@ contract C {
 }
 ```
 
-## Function as function input
+## Function in function input
 
 - Can use a function as an input to a function
 
@@ -120,6 +121,16 @@ contract c {
     function foo(function(uint256) external returns (bool) f, uint256 a) public {
         f(a);
     }
+}
+```
+
+## function in library
+
+- Can declare function in a library
+
+```solidity
+library L {
+    function foo(uint self) internal pure {}
 }
 ```
 
