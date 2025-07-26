@@ -20,7 +20,7 @@ contract C {
 }
 ```
 
-## Function as storage variable
+## Function in storage variable
 
 - Can be declared as a storage variable
 - Function type in storage must be external
