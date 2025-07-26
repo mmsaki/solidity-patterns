@@ -34,7 +34,7 @@ contract C {
 ```
 
 
-## Function as abstract contract
+## Function in abstract contract
 
 - Function can be declared inside an abstract contract.
 - Function in abstract contracts means a function is not yet implemented
@@ -49,7 +49,7 @@ abstract contract C {
 
 - [Abstract Contracts Documentation](https://github.com/ethereum/solidity/blob/develop/docs/contracts/abstract-contracts.rst)
 
-## function as interface
+## function in interface
 
 - Can declare function in interface
 
